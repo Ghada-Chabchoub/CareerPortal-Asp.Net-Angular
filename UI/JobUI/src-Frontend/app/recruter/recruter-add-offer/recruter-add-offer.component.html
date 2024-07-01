@@ -1,0 +1,80 @@
+<div class="container">
+    <br>
+    <h1>Add New Offer</h1>
+    <br>
+    <a href="/recruter/offers" class="btn btn-primary">Go Back To Offers List</a> 
+    <br>
+    <br>
+    <form #form="ngForm" (ngSubmit)="onSubmit()">
+
+        <div class="mb-3">
+            <label class="form-label">title</label>
+            <input type="text" class="form-control" name="title" [(ngModel)]="offer.title" >
+        </div>
+        <div class="mb-3">
+            <label class="form-label">location</label>
+            <input type="text" class="form-control" name="location" [(ngModel)]="offer.location" >
+        </div>
+        <div class="mb-3">
+            <label class="form-label">min_salary</label>
+            <input type="text" class="form-control" name="min_salary" [(ngModel)]="offer.min_salary" >
+        </div>
+        <div class="mb-3">
+            <label class="form-label">max_salary</label>
+            <input type="text" class="form-control" name="max_salary" [(ngModel)]="offer.max_salary" >
+        </div>
+        <div class="mb-3">
+            <label class="form-label">imageurl</label>
+            <input type="text" class="form-control" name="imageurl" [(ngModel)]="offer.imageurl" >
+        </div>
+        <div class="mb-3">
+            <label class="form-label">category</label>
+            <input type="text" class="form-control" name="category" [(ngModel)]="offer.category" >
+        </div>
+        <div class="mb-3">
+            <label class="form-label">job_nature</label>
+            <input type="text" class="form-control" name="job_nature" [(ngModel)]="offer.job_nature" >
+        </div>
+        <div class="mb-3">
+            <label class="form-label">job_location</label>
+            <input type="text" class="form-control" name="job_location" [(ngModel)]="offer.job_location" >
+        </div>
+        <div class="mb-3">
+            <label class="form-label">company_name</label>
+            <input type="text" class="form-control" name="company_name" [(ngModel)]="offer.company_name" >
+        </div>
+        <div class="mb-3">
+            <label class="form-label">description</label>
+            <textarea class="form-control" name="description" [(ngModel)]="offer.description"></textarea>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">author</label>
+            <input type="text" class="form-control" name="author" [(ngModel)]="offer.author" >
+        </div>
+        <div class="form-check mb-3">
+            <input class="form-check-input" type="checkbox"name="visible"  [(ngModel)]="offer.visible">
+            <label class="form-check-label" >
+                visible
+            </label>
+        </div>
+
+            
+        <div class="form-check mb-3">
+            <input class="form-check-input" type="checkbox"name="archivee"  [(ngModel)]="offer.archivee">
+            <label class="form-check-label" >archivee</label>
+        </div>
+             
+        <div class="mb-3">
+            <label class="form-label">publishDate</label>
+            <input class="form-control" type="Date"name="publishDate" [(ngModel)]="offer.publishDate" >
+        </div>
+        <div class="mb-3">
+            <label class="form-label">updateDate</label>
+            <input class="form-control" type="Date" name="updateDate" [(ngModel)]="offer.updateDate" >
+        </div>
+        <div>
+            <button type="submit"class="btn btn-primary">Create</button>
+        </div>
+    </form>
+    <br>
+</div>

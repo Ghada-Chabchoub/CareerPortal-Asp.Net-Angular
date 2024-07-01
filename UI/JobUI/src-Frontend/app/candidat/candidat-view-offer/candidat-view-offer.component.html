@@ -1,0 +1,37 @@
+
+<section class="sectevents py-5" >
+    <form class="submit-form  g-3"  name="form">
+    <div class="container px-4 px-lg-5 my-5" >
+        <div class="row gx-4 gx-lg-5 align-items-center">
+            <div class="col-md-4 pt-5">
+                <h1 class="display-5 fw-bolder">Offer Details</h1>
+            </div>
+            <div class="col-md-6 pt-5 d-flex justify-content-end" ><a  class="btn btn-success" (click)="onParticipateClick()">Participate</a></div>
+            <div class="col-md-2 pt-5 d-flex justify-content-start"><a href="/candidat/offers" class="btn  btn-primary">Offers List</a></div>
+
+            <div class="col-md-6 pt-5">
+                <h3 class="fw-bolder mb-3"><span>Post : </span>{{offer?.title}}</h3>
+                <div class="small mb-2">Category :<strong>{{offer?.category}}</strong> </div>
+                <div class="small mb-2"> Author : <strong>{{offer?.author}}</strong></div>
+                <div class="small mb-2">Company Name : <strong> {{offer?.company_name}}</strong> </div>
+                <h5>Description : </h5>
+                <p class="lead">{{offer?.description}}</p>
+            </div>
+            <div class="col-md-6 pt-5">
+
+                <h4 class="mb-3"><strong>More  Details : </strong></h4>
+              <div class="small mb-2">Location :  <strong>{{offer?.location}}</strong></div>
+              <div class="small mb-2">Job Nature : <strong> {{offer?.job_nature}} </strong></div>
+              <div class="small mb-4">Job Location :  <strong>{{offer?.job_location}}</strong></div>
+              <div class="small mb-4">Salary :  <strong>{{offer?.min_salary}} ==>  {{offer?.max_salary}}</strong></div>
+              <div class="small mb-4">Update Date:  <strong>{{offer?.updateDate}}</strong></div>
+
+          </div>
+        </div>
+        <div class="col py-5">
+            <img class="card-img-top mb-5 mb-md-0" src="{{offer?.imageurl}}"  alt=""  id="profile-pic"/>
+        </div>
+    </div>
+  </form>
+  </section>
+  

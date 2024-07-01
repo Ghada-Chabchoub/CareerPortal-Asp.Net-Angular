@@ -1,0 +1,49 @@
+<div class="container" *ngIf="candidature">
+    <br>
+    <br> 
+    <h1>Offer Details</h1>
+    <br>
+    <form class="submit-form  g-3"  name="form">
+      <div class="container px-4 px-lg-5 my-5" >
+          <div class="row gx-4 gx-lg-5 align-items-center">
+
+  
+              <div class="col-md-6 pt-5">
+                  <h3 class="fw-bolder mb-3"><span>Candidat Name : </span>{{candidature.pNom}}</h3>
+                  <div class="small mb-2">Last Name :<strong>{{candidature.pPrenom}}</strong> </div>
+                  <div class="small mb-2"> Email : <strong>{{candidature.pEmail}}</strong></div>
+                  <div class="small mb-2">Phone : <strong> {{candidature.pPhone}}</strong> </div>
+                  <div class="small mb-2">Localisation : <strong> {{candidature.pLocation}}</strong> </div>
+                  <h5>Description : </h5>
+                  <p class="lead">{{candidature.pDescription}}</p>
+              </div>
+              <div class="col-md-6 pt-5">
+  
+                  <h4 class="mb-3"><strong>More  Details : </strong></h4>
+                <div class="small mb-2">Degree :  <strong>{{candidature.pDegree}}</strong></div>
+                <div class="small mb-2">Major : <strong> {{candidature.pMajor}} </strong></div>
+                <div class="small mb-4">Age :  <strong>{{candidature.pAge}}</strong></div>
+            </div>
+          </div>
+          <div class="col py-5">
+            <img class="card-img-top mb-5 mb-md-0" src="{{candidature.pImageUrl}}"   id="profile-pic"/>
+        </div>
+      </div>
+    </form>
+    <br>
+    <form #form="ngForm" (ngSubmit)="onSubmit()">
+
+        <div class="form-floating">
+            <select class="form-select" [(ngModel)]="candidature.etat_Candidature" [ngModelOptions]="{standalone: true}">
+              <option *ngFor="let option of etatCandidatureOptions" [value]="option.value">{{ option.label }}</option>
+            </select>
+          </div>
+
+ 
+        <div>
+            <button type="submit"class="btn btn-primary m-2">Save</button>
+            <a class="btn btn-danger m-2" (click)="deleteOffer()">Delete</a>
+
+        </div>
+    </form>
+</div>

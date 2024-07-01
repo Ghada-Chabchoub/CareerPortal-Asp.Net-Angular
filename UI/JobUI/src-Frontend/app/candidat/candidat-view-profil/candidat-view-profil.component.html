@@ -1,0 +1,56 @@
+<div class="container" *ngIf="profil">
+    <br>
+    <br> 
+    <h1>View Profil</h1>
+    <br>
+    <br>
+    <form #form="ngForm" (ngSubmit)="onSubmit()">
+        <div class="mb-3">
+          <label class="form-label">Profil Id</label>
+          <input type="text" class="form-control" name="id" [(ngModel)]="profil.ID_Profil" readonly>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Nom</label>
+            <input type="text" class="form-control" name="Nom" [(ngModel)]="profil.Nom" >
+        </div> 
+        <div class="mb-3">
+            <label class="form-label">Prenom</label>
+            <input type="text" class="form-control" name="Prenom" [(ngModel)]="profil.Prenom" >
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Email</label>
+            <input type="text" class="form-control" name="Email" [(ngModel)]="profil.Email" >
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Phone</label>
+            <input type="number" class="form-control" name="Phone" [(ngModel)]="profil.Phone" >
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Location</label>
+            <input type="text" class="form-control" name="Location" [(ngModel)]="profil.Location" >
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Degree</label>
+            <input type="text" class="form-control" name="Degree" [(ngModel)]="profil.Degree" >
+        </div>
+        <div class="mb-3">
+            <label class="form-label">ImageUrl</label>
+            <input type="text" class="form-control" name="ImageUrl" [(ngModel)]="profil.ImageUrl" >
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Major</label>
+            <input type="text" class="form-control" name="Major" [(ngModel)]="profil.Major" >
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Age</label>
+            <input type="number" class="form-control" name="Age" [(ngModel)]="profil.Age" >
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Description</label>
+            <textarea class="form-control" name="description" [(ngModel)]="profil.Description"></textarea>
+        </div>
+        <div>
+            <button class="btn btn-primary m-2">Save</button>
+        </div>
+    </form>
+</div>

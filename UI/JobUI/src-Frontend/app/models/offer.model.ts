@@ -1,0 +1,18 @@
+export interface Offer {
+    id: string,
+    title: string,
+    location : string,
+    min_salary : string,
+    max_salary  : string,
+    imageurl  : string,
+    category  : string, 
+    job_nature  : string,
+    job_location  : string,
+    company_name  : string,
+    description  : string,
+    visible : boolean,
+    archivee : boolean,
+    author : string, 
+    publishDate : Date,
+    updateDate : Date,
+}

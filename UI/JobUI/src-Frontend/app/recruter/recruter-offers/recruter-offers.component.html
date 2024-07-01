@@ -1,0 +1,41 @@
+<div class="container">
+    <br>
+    <h1>Offers List</h1>
+    <br>
+    <div class="d-flex justify-content-between">
+        <a href="/recruter/offers/add" class="btn btn-primary">Add New Offer</a>
+        <a href="/recruter/candidatures" class="btn btn-primary">Go To Candidature List</a>
+        <a href="/" class="btn  btn-danger">Log Out</a>
+    </div>
+
+    <br>
+    <div class="search-hero col-4 d-flex justify-content-start">
+        <input class="form-control "type="text" placeholder="Serach by Comapny Name" #filter>
+        <button class="btn btn-primary mx-3" type="button" (click)="filterResults(filter.value)">Search</button>
+    </div>
+    <br>     
+</div>
+
+<div class="container sectevent-list text-center  bg-body-tertiary">
+<div class="row text-center justify-content-evenly">
+<div class="text-center col-6 d-flex justify-content-between row gy-3" *ngFor="let offer of filteredoffers " >
+    <div class="card2 text-center col" >
+        <img src="{{ offer.imageurl }}" class="card2-img" alt="...">
+        <div class="card2-body " > 
+            <h6>Company / {{ offer.company_name }}</h6>
+            <h2 class="card-title">{{ offer.title }}</h2>
+            <p class="card-sub-title">location : <strong>{{ offer.location }}</strong> </p>
+            <p class="card-sub-title"> job_nature : <strong>{{ offer.job_nature }}</strong>  </p>
+            <p class="card-sub-title"> job_location : <strong> {{ offer.job_location }}</strong> </p> 
+            <p class="card-info">Description  <br>{{ offer.description }}</p>
+            <div class="container text-center">
+                <button  [routerLink]="['/recruter/offers',offer.id]"  type="button" class="btn btn-success my-2 mx-1">Edit Details<i ></i></button>                      
+                <!--
+                <button  type="button" class="btn btn-warning my-2 mx-1">Participate<i></i></button>  
+                -->
+       
+            </div>      
+        </div>
+    </div>
+</div>
+</div>

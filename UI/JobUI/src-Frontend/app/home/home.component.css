@@ -1,0 +1,32 @@
+html{
+  scroll-behavior: smooth;
+}
+body{  
+    height: auto;
+    width: auto ;
+    background-color: #393E46 ;
+    border:1px solid #393E46;  
+
+} 
+
+.sectservice{
+    background-color: #45474B ;
+    padding-top: 40px;
+    padding-bottom: 20px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    margin-left: 70px;
+    margin-right: 70px;
+    height: 700px;
+    border-radius: 25px;
+}
+
+.sectservice .cbox{
+    width: auto;
+    background-color: #393E46;
+    width: 18rem;
+    margin: 15px 0 15px 0;
+    padding: 10px 10px 10px 10px;
+}
+
+

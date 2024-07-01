@@ -1,0 +1,34 @@
+<!-- login.component.html -->
+<div class="container">
+  <div>
+    <div class="container px-4 text-center">
+      <div class="row gx-5 y">
+        <div class="col x1">
+          <div class="p-3">
+            <img class="img-thumbnail" src="./assets/images/img4.jpg">
+          </div>
+        </div>
+        <div class="col x2 text-center">
+          <h2 class="text-light my-5">Login To Your Account</h2>
+          <div class="row text-center">
+            <form (ngSubmit)="onSubmit()">
+              <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label text-light">Email address</label>
+                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                       [(ngModel)]="user.Email" name="Email">
+                <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+              </div>
+              <div class="mb-3 ">
+                <label for="exampleInputPassword1" class="form-label text-light">Password</label>
+                <input type="password" class="form-control " id="exampleInputPassword1"
+                       [(ngModel)]="user.Password" name="Password">
+              </div>
+
+              <button type="submit" class="btn btn-primary mt-5">Login</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

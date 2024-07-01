@@ -1,0 +1,44 @@
+<div class="container">
+    <br>
+    <h1>Candidature List</h1>
+    <br>
+    <div class="d-flex justify-content-end">
+        <a href='candidat/profil/add' class="btn btn-primary">Add Profil</a>
+        <a href="/" class="btn btn-danger">Log Out</a>
+    </div> 
+</div>
+<br>
+<div class="search-hero col-4 d-flex justify-content-between">
+    <input class="form-control" type="text" placeholder="Search by Company Name" [(ngModel)]="filterText">
+    <button class="btn btn-primary mx-3" type="button" (click)="filterResults()">Search</button>
+</div>
+<br> 
+
+<div class="container sectevent-list text-center pb-2 my-5 bg-body-tertiary">
+    <div class="row text-center justify-content-evenly">
+        <div class="text-center col-6 d-flex justify-content-between row gy-3">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th class="col-4">Title</th>
+                        <th class="col-4">Company Name</th>
+                        <th class="col-4">Email</th>
+                        <th class="col-4">Etat Candidature</th>
+                        <th class="col-4">Action</th>
+
+                    </tr>
+                </thead>
+                <tbody>
+                  
+                    <tr *ngFor="let candidature of filteredCandidatures">
+                        <td >{{ candidature.title }}</td>
+                        <td>{{ candidature.company_name }}</td>
+                        <td>{{ candidature.pEmail }}</td>
+                        <td>{{ candidature.etat_Candidature }}</td>
+                        <td><a [routerLink]="['/recruter/candidature',candidature.iD_Candidature]">View</a></td>
+                      </tr>   
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

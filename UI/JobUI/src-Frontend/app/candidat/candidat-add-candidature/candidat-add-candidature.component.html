@@ -1,0 +1,72 @@
+<div class="container">
+    <br>
+    <h1>Add Candidature</h1>
+    <br>
+    <a href="/recruter/offers" class="btn btn-primary">Go Back To Offers List</a> 
+    <br>
+    <br>
+    <form #form="ngForm" (ngSubmit)="onSubmit()">
+    
+        <div class="mb-3">
+            <label class="form-label">Post Title</label>
+            <input type="text" class="form-control" name="Title" [(ngModel)]="candidature.Title" >
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Company_name</label>
+            <input type="text" class="form-control" name="Company_name" [(ngModel)]="candidature.Company_name" >
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">PNom</label>
+            <input type="text" class="form-control" name="PNom" [(ngModel)]="candidature.PNom" >
+        </div>
+    
+        <div class="mb-3">
+            <label class="form-label">PEmail</label>
+            <input type="text" class="form-control" name="PEmail" [(ngModel)]="candidature.PEmail" >
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">PPhone</label>
+            <input type="number" class="form-control" name="PPhone" [(ngModel)]="candidature.PPhone" >
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">PLocation</label>
+            <input type="text" class="form-control" name="PLocation" [(ngModel)]="candidature.PLocation" >
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">PDegree</label>
+            <input type="text" class="form-control" name="PDegree" [(ngModel)]="candidature.PDegree" >
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">PMajor</label>
+            <input type="text" class="form-control" name="PMajor" [(ngModel)]="candidature.PMajor" >
+        </div>
+        <div class="mb-3">
+            <label class="form-label">PAge</label>
+            <input type="number" class="form-control" name="PAge" [(ngModel)]="candidature.PAge" >
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">PDescription</label>
+            <input type="text" class="form-control" name="PDescription" [(ngModel)]="candidature.PDescription" >
+        </div>
+
+
+        <div class="mb-3">
+            <label class="form-label">Etat_Candidature</label>
+            <select class="form-select" name="Etat_Candidature" [(ngModel)]="candidature.Etat_Candidature" disabled>
+                <option *ngFor="let status of ['Pending', 'Approved', 'Rejected']" [value]="status">{{ status }}</option>
+            </select>
+        </div>
+
+        <div>
+            <button type="submit"class="btn btn-primary">Confirm Participation</button>
+        </div>
+    </form>
+    <br>
+</div>

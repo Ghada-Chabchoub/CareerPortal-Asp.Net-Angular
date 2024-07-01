@@ -1,0 +1,78 @@
+<body>
+    <section id="three" class="sectservice">
+      <div class="container overflow-hidden text-center text-light">
+        <div class="row  g-3">
+          <div class="col-12 ">
+            <h1 class="p-3">Create A New Account</h1>
+          </div>
+  
+          <div class="container px-4 text-center">
+            <div class="row gx-5">
+              <div class="col">
+
+                <img src="/assets/images/img3.jpg" class="my-5" width="400" alt="">
+              </div>
+              <div class="col">
+                <div class="p-3">
+                    <form (ngSubmit)="onSubmit()" class="">
+
+                        <div class="row my-3">
+                            <div class="col-6">
+                                <label for="firstName">First Name:</label>
+                                <input type="text" class="form-control" [(ngModel)]="registerModel.firstName" name="firstName" required>
+                              </div>
+                              <div class="col-6">
+                                <label for="lastName">Last Name:</label>
+                                <input type="text" class="form-control" [(ngModel)]="registerModel.lastName" name="lastName" required>
+                              </div>
+                        </div>
+
+
+                        <div class="row my-3 ">
+                        <div class="col-6 align-self-center">
+                          <label for="email">Email:</label>
+                          <input type="email" class="form-control" [(ngModel)]="registerModel.Email" name="email" required>
+                        </div>
+                        <div class="col-6">
+                            <label for="role">Role:</label>
+                            <select id="role"  class="form-select" [(ngModel)]="registerModel.Role" name="role" required>
+                              <option value="candidat" selected>Candidat</option>
+                              <option value="recruter">Recruter</option>
+                            </select>
+                          </div>
+                        </div>
+
+                        <div class="row my-3 text-center">
+                        <div class="col-12 my-3">
+                          <label for="password">Password:</label>
+                          <input type="password" class="form-control" [(ngModel)]="registerModel.Password" name="password" required>
+                        </div>
+                        <div class="col-12 my-3">
+                          <label for="confirmPassword">Confirm Password:</label>
+                          <input type="password" class="form-control" [(ngModel)]="registerModel.ConfirmPassword" name="confirmPassword" required>
+                        </div>
+                    </div>
+
+                        
+                        <button type="submit" class="btn btn-primary my-3">Register</button>
+                        <a class="btn btn-primary my-3" href="/login">Go To Login Page</a>
+                      </form>
+                </div>
+              </div>
+            </div>
+          </div>
+  
+          <div class="row justify-content-evenly">
+            <div>
+
+            </div>
+           
+          </div>
+  
+        </div>
+      </div>
+    </section>
+</body>
+  
+  
+  
